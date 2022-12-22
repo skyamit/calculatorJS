@@ -1,5 +1,5 @@
 var data  = "";
-
+var res = "";
 var result = document.getElementById("result");
 var output = document.getElementById("output");
 var button = document.getElementsByClassName("word");
@@ -15,7 +15,7 @@ for(b of button){
 }
 
 function calculateResult() {
-    var res = eval(data);
+    res = eval(data);
     result.innerHTML = "= "+res;
 }
 
@@ -23,4 +23,9 @@ function reset(){
     data = "";
     output.innerHTML ="";
     result.innerHTML = "";
+}
+
+function useResult(){
+    output.innerHTML = res;
+    data = res;
 }
